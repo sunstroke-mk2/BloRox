@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class StateJump : PlayersState
 {
-    public StateJump(PlayersSM _sm, PlayerController _ctrl) : base(_sm, _ctrl)
+    public StateJump(PlayersSM _sm, PlayerFacade _ctrl) : base(_sm, _ctrl)
     {
 
     }

@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class PlayersSM : MonoBehaviour
 {
-    public PlayerController PlayerController;
+    public PlayerFacade PlayerController;
     Dictionary<PlayerStateEnum, PlayersState> states=new Dictionary<PlayerStateEnum, PlayersState>();
     private PlayersState currentState;
     private void Start()

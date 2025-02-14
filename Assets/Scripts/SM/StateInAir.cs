@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class StateInAir : PlayersState
 {
-    public StateInAir(PlayersSM _sm, PlayerController _ctrl) : base(_sm, _ctrl)
+    public StateInAir(PlayersSM _sm, PlayerFacade _ctrl) : base(_sm, _ctrl)
     {
 
     }
@@ -14,7 +14,7 @@ public class StateInAir : PlayersState
 
     public override void Execute()
     {
-        Vector3 inputData = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+        Vector3 inputData = InputHandler.Instance.InputData;
         myController.MoveCharacter(inputData);
 
         if (inputData != Vector3.zero)

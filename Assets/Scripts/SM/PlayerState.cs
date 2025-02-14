@@ -1,10 +1,10 @@
 public abstract class PlayersState
 {
     protected PlayersSM mySM;
-    protected PlayerController myController;
+    protected PlayerFacade myController;
     private PlayersSM sm;
 
-    public PlayersState(PlayersSM _sm, PlayerController _controller)
+    public PlayersState(PlayersSM _sm, PlayerFacade _controller)
     {
         mySM = _sm;
         myController = _controller;

@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class StateLanded : PlayersState
 {
-    public StateLanded(PlayersSM _sm,PlayerController _ctrl) : base(_sm, _ctrl)
+    public StateLanded(PlayersSM _sm,PlayerFacade _ctrl) : base(_sm, _ctrl)
     {
 
     }
@@ -14,7 +14,7 @@ public class StateLanded : PlayersState
 
     public override void Execute()
     {
-        Vector3 inputData = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+        Vector3 inputData = InputHandler.Instance.InputData;
 
         myController.MoveCharacter(inputData);
 
@@ -22,7 +22,7 @@ public class StateLanded : PlayersState
         {
             myController.RotateCharacter(inputData);
         }
-        if (Input.GetButton("Jump"))
+        if (InputHandler.Instance.Jump)
         {
             mySM.ChangeState(PlayerStateEnum.jump);
         }
