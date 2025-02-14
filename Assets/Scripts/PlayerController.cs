@@ -27,33 +27,38 @@ public class PlayerController : MonoBehaviour
             playerVelocity.y = 0f;
         }
 
-        Vector3 inputData= new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+      //  Vector3 inputData= new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
 
-        MoveCharacter(inputData);
+     //   MoveCharacter(inputData);
 
-        if (inputData != Vector3.zero)
-        {
-            RotateCharacter(inputData);
-        }
-
+    //    if (inputData != Vector3.zero)
+     //   {
+     //       RotateCharacter(inputData);
+      //  }
+        /*
         if (Input.GetButtonDown("Jump") && groundedPlayer)
         {
            myAnimator.SetTrigger("Jump");
            playerVelocity.y += Mathf.Sqrt(jumpHeight * -2.0f * gravityValue);
         }
-
+        */
         playerVelocity.y += gravityValue * Time.deltaTime;
         controller.Move(playerVelocity * Time.deltaTime);
-        myAnimator.SetFloat("Movement",inputData.magnitude);
+       // myAnimator.SetFloat("Movement",inputData.magnitude);
         myAnimator.SetBool("Grounded", groundedPlayer);
     }
-    bool isGrounded()
+     public bool isGrounded()
     {
         Vector3 groundCheckPosition = transform.position;
         return Physics.Raycast(transform.position,-Vector3.up, 0.2F);
     }
 
-    void MoveCharacter(Vector3 moveDirection)
+    public void Jump()
+    {
+        myAnimator.SetTrigger("Jump");
+        playerVelocity.y += Mathf.Sqrt(jumpHeight * -2.0f * gravityValue);
+    }
+     public void MoveCharacter(Vector3 moveDirection)
     {
         Vector3 cameraForward = GetHorizontalCameraDirection();
         Vector3 movement = cameraForward * moveDirection.z + cameraTransform.right * moveDirection.x;
@@ -69,7 +74,7 @@ public class PlayerController : MonoBehaviour
         cameraForward.Normalize();
         return cameraForward;
     }
-    void RotateCharacter(Vector3 lookDirection)
+    public void RotateCharacter(Vector3 lookDirection)
     {
         Vector3 cameraForward = GetHorizontalCameraDirection();
         Vector3 targetDirection = cameraForward * lookDirection.z + cameraTransform.right * lookDirection.x;

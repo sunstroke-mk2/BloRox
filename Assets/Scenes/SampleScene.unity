@@ -2987,7 +2987,13 @@ PrefabInstance:
       addedObject: {fileID: 7586569332784778510}
     - targetCorrespondingSourceObject: {fileID: 4545975286335925995, guid: 8b82763d1fe9d134a9a0f9180b28a68f, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 7586569332784778512}
+    - targetCorrespondingSourceObject: {fileID: 4545975286335925995, guid: 8b82763d1fe9d134a9a0f9180b28a68f, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 7586569332784778511}
+    - targetCorrespondingSourceObject: {fileID: 4545975286335925995, guid: 8b82763d1fe9d134a9a0f9180b28a68f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7586569332784778513}
   m_SourcePrefab: {fileID: 100100000, guid: 8b82763d1fe9d134a9a0f9180b28a68f, type: 3}
 --- !u!4 &7586569332784778508 stripped
 Transform:
@@ -3032,6 +3038,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c94c0d68d6e29744893262195f2ebabc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &7586569332784778512
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2054679406}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 77991b8cea6cbbf4d9de417ba7350001, type: 3}
+  m_Controller: {fileID: 9100000, guid: e2729844dd28915499928fa8f1881c27, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7586569332784778513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2054679406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 813752b060c33f34b910f0576510f675, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerController: {fileID: 7586569332784778511}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
